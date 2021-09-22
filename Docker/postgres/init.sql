@@ -1,0 +1,4 @@
+CREATE USER admin WITH PASSWORD 'adminpas';
+
+CREATE DATABASE image_db;
+GRANT ALL PRIVILEGES ON DATABASE image_db TO admin;

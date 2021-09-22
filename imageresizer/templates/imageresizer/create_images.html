@@ -1,0 +1,13 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load static %}
+{% block content %}
+<h2>Создание новой картинки</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {% bootstrap_form form layout='horizontal' %}
+  {{ form.media }}
+  <input type="hidden" name="next" value="{{ next }}">
+  <button type="submit" class="btn btn-dark">Регистрация</button>
+</form>
+{% endblock %}
